@@ -3,6 +3,16 @@ Repetition and Exceptions
 
 # C++ Exceptions
 
+C++ includes a new, improved mechanism for capturing and handling errors called **exceptions**.
+
+An **exception** is “a case in which a rule or principle does not apply.” 
+
+Exception is also defined as an objection to something. 
+
+Either definition works: An exception is an unexpected (and presumably objectionable) condition that occurs during the execution of the program.
+
+<hr>
+
 When executing C++ code, different errors can occur: 
 
 - coding errors made by the programmer, 
@@ -32,3 +42,4 @@ catch () {
   // Block of code to handle errors
 } 
 ```
+An exception is thrown by using the throw keyword from inside the try block. Exception handlers are declared with the keyword catch, which must be placed immediately after the try block.

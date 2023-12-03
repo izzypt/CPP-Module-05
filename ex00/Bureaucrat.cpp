@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
+/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:09:39 by simao             #+#    #+#             */
-/*   Updated: 2023/12/02 15:18:19 by simao            ###   ########.fr       */
+/*   Updated: 2023/12/03 17:42:42 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void Bureaucrat::decGrade()
        m_grade++;
 }
 
-std::ostream &operator<<( std::ostream & ost, Bureaucrat const &bur)
+std::ostream &operator<<(std::ostream &ost, Bureaucrat const &bur)
 {
 	ost << bur.getName() << ", bureaucrat grade: " << bur.getGrade();
 	return ost;

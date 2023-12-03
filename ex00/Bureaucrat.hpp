@@ -46,6 +46,6 @@ class GradeTooLowException : public std::exception
             }
 };
 
-std::ostream & operator <<(std::ostream &ost, Bureaucrat const &bur);
+std::ostream& operator<<(std::ostream &ost, Bureaucrat const &bur);
 
 #endif

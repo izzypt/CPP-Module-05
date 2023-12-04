@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 19:57:31 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 20:00:38 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:24:47 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ public:
     AForm &operator=(const AForm &other);
     virtual ~AForm();
 
-    const std::string &getName() const;
+    const std::string &get_name() const;
     bool isSigned() const;
     int get_grade_to_sign() const;
     int get_grade_to_execute() const;

@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 20:12:00 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 20:29:03 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:04:56 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,15 @@ AForm::AForm(const AForm &other)
 
 AForm::~AForm() {}
 
-AForm &AForm::operator=(const AForm &other) {
+AForm &AForm::operator=(const AForm &other)
+{
     if (this != &other) {
         is_signed = other.is_signed;
     }
     return *this;
 }
 
-const std::string &AForm::getName() const { 
+const std::string &AForm::get_name() const { 
     return name; 
 }
 
@@ -60,7 +61,7 @@ void AForm::beSigned(const Bureaucrat &bureaucrat) {
 }
 
 std::ostream &operator<<(std::ostream &out, const AForm &form) {
-    out << "AForm " << form.getName() << ", is signed: " << (form.isSigned() ? "yes" : "no")
+    out << "AForm " << form.get_name() << ", is signed: " << (form.isSigned() ? "yes" : "no")
         << ", grade required to sign: " << form.get_grade_to_sign()
         << ", grade required to execute: " << form.get_grade_to_execute();
     return out;

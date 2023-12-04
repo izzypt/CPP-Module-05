@@ -20,7 +20,8 @@ class Bureaucrat
         void inc_grade();
         void dec_grade();
         void sign_form(const bool sign, const std::string &form_name) const;
-    
+        void execute_form(AForm const & form);
+
     private:
         std::string name;
         int grade;

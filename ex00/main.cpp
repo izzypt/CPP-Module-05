@@ -6,7 +6,7 @@
 /*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:47:25 by simao             #+#    #+#             */
-/*   Updated: 2023/12/03 13:19:57 by simao            ###   ########.fr       */
+/*   Updated: 2023/12/04 14:01:05 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int main(void)
 {
-    Bureaucrat bur("Luis", 150);
+    Bureaucrat bur("Simao", 150);
     std::cout << bur.getName() << std::endl;
     std::cout << bur.getGrade() << std::endl;
 
     std::cout << "--------------------" << std::endl;
 
-    Bureaucrat other("Lucas", 1);
+    Bureaucrat other("Tomas", 1);
     std::cout << other.getName() << std::endl;
     std::cout << other.getGrade() << std::endl;
 
@@ -28,7 +28,7 @@ int main(void)
 
     try 
     {
-        Bureaucrat other_bur("Nico", 151);
+        Bureaucrat other_bur("Ramos", 151);
     }
     catch (std::exception &error)
     {
@@ -39,7 +39,7 @@ int main(void)
 
     try 
     {
-        Bureaucrat other_bur("Rute", 0);
+        Bureaucrat other_bur("Rita", 0);
     }
     catch (std::exception &error)
     {

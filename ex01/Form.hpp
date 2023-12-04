@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:27:02 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/03 18:00:56 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 14:27:12 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Form
         Form();
         ~Form();
         void beSigned(const Bureaucrat &bureaucrat);
+
         class GradeTooHighException : public std::exception 
         {
             public:

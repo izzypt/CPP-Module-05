@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:28:49 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/03 16:51:14 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 14:39:36 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,12 @@ Form::Form()
 Form::~Form()
 {
     std::cout << "Destructor called" << std::endl;
+}
+
+void Form::beSigned(const Bureaucrat &bureaucrat)
+{
+    if (bureaucrat.getGrade() >= grade)
+        form_signed = true;
+    else
+        throw(GradeTooLowException());
 }

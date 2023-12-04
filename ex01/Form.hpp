@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:27:02 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/03 18:00:56 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 18:34:03 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,21 @@
 
 class Form 
 {
+    private:
+        std::string const name;
+        bool form_signed;
+        int const grade_to_sign;
+        int const grade_to_execute;
+
     public:
-        Form();
+        Form(const std::string &name, int grade_to_sign, int grade_to_execute);
         ~Form();
+		std::string Form::get_name() const;
+		int Form::get_grade_to_sign() const;
+		int Form::get_grade_to_execute() const;
+		std::string Form::get_signed() const;
         void beSigned(const Bureaucrat &bureaucrat);
-        class GradeTooHighException : public std::exception 
+		class GradeTooHighException : public std::exception 
         {
             public:
                 virtual const char* what() const throw();
@@ -34,11 +44,6 @@ class Form
             public:
                 virtual const char* what() const throw();
         };
-
-    private:
-        bool form_signed;
-        std::string const name;
-        int const grade;
 };
 
 #endif

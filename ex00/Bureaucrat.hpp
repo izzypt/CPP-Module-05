@@ -15,15 +15,14 @@ class Bureaucrat
         Bureaucrat(const Bureaucrat &bureaucrat);
         Bureaucrat& operator=(const Bureaucrat &bureaucrat);
         ~Bureaucrat();
-        std::string getName() const;
-        int getGrade() const;
-        void incGrade();
-        void decGrade();
-
+        std::string get_name() const;
+        int get_grade() const;
+        void inc_grade();
+        void dec_grade();
     
     private:
-        std::string m_name;
-        int m_grade;
+        std::string name;
+        int grade;
 };
 
 

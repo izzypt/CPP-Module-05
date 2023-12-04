@@ -6,7 +6,7 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:28:49 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 19:09:04 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 19:54:23 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Form::Form(const std::string &name, int grade_to_sign, int grade_to_execute): name(name), form_signed(false), grade_to_sign(grade_to_sign), grade_to_execute(grade_to_execute)
 {
-    std::cout << "Default constructor called" << std::endl;
     if (grade_to_sign < 1 || grade_to_execute < 1) throw GradeTooHighException();
     if (grade_to_sign > 150 || grade_to_execute > 150) throw GradeTooLowException();
 }

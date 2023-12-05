@@ -1,12 +1,12 @@
 # Makefile
-NAME = exercise02
+NAME = exercise03
 
 # Compiler
 CC = c++
 CFLAGS	= -Werror -Wextra -Wall -std=c++98
 
 # Source files
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShruberryCreationForm.cpp
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 
 # Colors
 RED=\033[1;31m

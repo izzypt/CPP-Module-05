@@ -1,5 +1,5 @@
 # Makefile
-NAME = exercise01
+NAME = exercise00
 
 # Compiler
 CC = c++

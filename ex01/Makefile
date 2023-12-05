@@ -1,29 +1,33 @@
 # Makefile
-NAME = exercise01
+# Makefile
+NAME = exercise00
 
 # Compiler
 CC = c++
+CFLAGS	= -Werror -Wextra -Wall -std=c++98
 
 # Source files
 SRCS = main.cpp Bureaucrat.cpp Form.cpp
 
-# Define the colors
+# Colors
 RED=\033[1;31m
 GREEN=\033[1;32m
 YELLOW=\033[1;33m
 NC=\033[0m #color reset value (No color)
 
-$(NAME): $(SRCS)
-		@echo "$(GREEN)\nCompiling ex01 with MakeFile...\n$(NC)"
-		$(CC) $(SRCS)
+# Variables
+$(NAME):
+		@echo "$(GREEN)Compiling ex00 with MakeFile...$(NC)"
+		$(CC) $(SRCS) -o $(NAME)
 
 # Rules
 all: $(NAME)
-		$(CC) $(SRCS) -o $(NAME)
 
-clean:
-		@echo "$(RED)\nRemoving ex01 with MakeFile...\n$(NC)"
-		rm -f $(NAME)
+clean: 
+	@echo "$(RED)Removed ex00...$(NC)"
+	rm -f $(NAME)
 
-re:
-	make clean && make all
+re: clean all
+
+
+.PHONY: all clean re

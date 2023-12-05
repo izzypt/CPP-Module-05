@@ -1,8 +1,9 @@
 # Makefile
-NAME = exercise00
+NAME = exercise01
 
 # Compiler
 CC = c++
+CFLAGS	= -Werror -Wextra -Wall -std=c++98
 
 # Source files
 SRCS = main.cpp Bureaucrat.cpp

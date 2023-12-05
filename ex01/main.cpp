@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:30:47 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 19:30:41 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/05 16:37:35 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,30 +26,6 @@ int main(void)
     std::cout << form.get_name() << std::endl;
 
     std::cout << form << std::endl;
-
-    std::cout << "--------------------" << std::endl;
-
-    try
-    {
-        form.beSigned(cLuis);
-    }
-    catch (std::exception &error)
-    {
-        std::cout << error.what() << std::endl;
-    }
-    std::cout << form.get_signed() << std::endl;
-
-    std::cout << "--------------------" << std::endl;
-
-    try
-    {
-        other_form.beSigned(cLuis);
-    }
-    catch (std::exception &error)
-    {
-        std::cout << error.what() << std::endl;
-    }
-    std::cout << other_form.get_signed() << std::endl;
 
     std::cout << "-------TRY LOW-------------" << std::endl;
 

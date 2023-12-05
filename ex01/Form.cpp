@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:28:49 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 19:54:23 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/05 16:36:40 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int Form::get_grade_to_sign() const
 
 int Form::get_grade_to_execute() const
 {
-    return (grade_to_sign);
+    return (grade_to_execute);
 }
 
 std::string Form::get_signed() const
@@ -48,7 +48,7 @@ std::string Form::get_signed() const
 
 void Form::beSigned(const Bureaucrat &bureaucrat)
 {
-    if (bureaucrat.get_grade() >= grade_to_sign) {
+    if (bureaucrat.get_grade() <= this->grade_to_sign) {
         throw GradeTooLowException();
     }
     form_signed = true;

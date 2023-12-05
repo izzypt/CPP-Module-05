@@ -1,20 +1,30 @@
 # Makefile
-NAME = ex00
+NAME = exercise00
 
+# Compiler
 CC = c++
 
+# Source files
 SRCS = main.cpp Bureaucrat.cpp
 
-
-# Define the colors
-RED=\033[0;31m
+# Colors
+RED=\033[1;31m
 GREEN=\033[1;32m
 YELLOW=\033[1;33m
 NC=\033[0m #color reset value (No color)
 
-all: $(NAME)
-		$(CC) $(SRCS)
-
 $(NAME):
 		@echo "$(GREEN)Compiling ex00 with MakeFile...$(NC)"
-		$(CC) $(SRCS)
+		$(CC) $(SRCS) -o $(NAME)
+
+# Rules
+all: $(NAME)
+
+clean: 
+	@echo "$(RED)Removed ex00...$(NC)"
+	rm -f $(NAME)
+
+re: clean all
+
+
+.PHONY: all clean re

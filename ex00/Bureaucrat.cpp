@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:09:39 by simao             #+#    #+#             */
-/*   Updated: 2023/12/04 23:42:48 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/05 16:53:11 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name)
         throw(GradeTooLowException());
     }
     std::cout << "Constructor called for Bureaucrat" << std::endl;
-    grade = grade;
+    this->grade = grade;
     return ;
 
 }

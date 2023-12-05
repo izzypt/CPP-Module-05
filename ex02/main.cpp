@@ -6,12 +6,13 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 22:54:46 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 22:55:50 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:29:29 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -32,16 +33,16 @@ int main() {
         std::cout << pardonForm << std::endl;
 
         bob.sign_form(shrubForm);
-        bob.executeForm(shrubForm);
+        bob.execute_form(shrubForm);
         
         bob.sign_form(robotForm);
-        bob.executeForm(robotForm);
+        bob.execute_form(robotForm);
         
         bob.sign_form(pardonForm);
-        bob.executeForm(pardonForm);
+        bob.execute_form(pardonForm);
 
         jim.sign_form(shrubForm);
-        jim.executeForm(shrubForm);
+        jim.execute_form(shrubForm);
     }
     catch (const std::exception& e) 
     {

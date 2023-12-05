@@ -6,20 +6,13 @@
 /*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 13:09:39 by simao             #+#    #+#             */
-/*   Updated: 2023/12/04 23:04:22 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:44:13 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
 
-Bureaucrat::Bureaucrat()
-{
-    std::cout << "Default Constructor called for Bureaucrat" << std::endl;
-    return ;
-}
-
-Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name)
+Bureaucrat::Bureaucrat(const std::string &_name, int grade) : name(_name)
 {
     if (grade < 1)
     {
@@ -30,7 +23,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : name(name)
         throw(GradeTooLowException());
     }
     std::cout << "Constructor called for Bureaucrat" << std::endl;
-    grade = grade;
+    this->grade = grade;
     return ;
 
 }
@@ -93,12 +86,14 @@ std::ostream &operator<<(std::ostream &ost, Bureaucrat const &bur)
 	return ost;
 }
 
-void Bureaucrat::sign_form(const bool sign, const std::string &form_name) const
+void Bureaucrat::sign_form(AForm& aform) const
 {
-    if (sign == true)
-        std::cout << name << " signed " << form_name << std::endl;
-    else
-        std::cout << name << " couldn’t sign " << form_name << " because grade too low" << std::endl;
+    try {
+        aform.beSigned(*this);
+        std::cout << name << " signed " << aform.get_name() << std::endl;
+    } catch (const std::exception& e) {
+        std::cout << name << " couldn’t sign " << aform.get_name() << " because " << e.what() << std::endl;
+    }
 
 }
 

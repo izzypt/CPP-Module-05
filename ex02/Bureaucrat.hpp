@@ -2,15 +2,17 @@
 #define BUREAUCRAT_HPP
 
 /* LIbraries */
+#include "AForm.hpp"
 #include <iostream>
 #include <string.h>
 
 /* Classes */
+class AForm;
+
 class Bureaucrat 
 {
   
     public:
-        Bureaucrat();
         ~Bureaucrat();
         Bureaucrat(const std::string &name, int grade);
         Bureaucrat(const Bureaucrat &bureaucrat);
@@ -19,7 +21,7 @@ class Bureaucrat
         int get_grade() const;
         void inc_grade();
         void dec_grade();
-        void sign_form(const bool sign, const std::string &form_name) const;
+        void sign_form(AForm& aform) const;
         void execute_form(AForm const & form);
 
     private:

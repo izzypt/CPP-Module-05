@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pshevche <pshevche@student.42.fr>          +#+  +:+       +#+        */
+/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 16:08:00 by pshevche          #+#    #+#             */
-/*   Updated: 2023/12/03 16:08:02 by pshevche         ###   ########.fr       */
+/*   Updated: 2023/12/04 23:33:05 by smagalha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
     return *this;
 }
 
-const std::string &RobotomyRequestForm::getTarget() const {
+const std::string &RobotomyRequestForm::get_target() const {
     return _target;
 }
 

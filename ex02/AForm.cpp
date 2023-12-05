@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smagalha <smagalha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: simao <simao@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 20:12:00 by smagalha          #+#    #+#             */
-/*   Updated: 2023/12/04 23:04:56 by smagalha         ###   ########.fr       */
+/*   Updated: 2023/12/05 17:49:15 by simao            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "Bureaucrat.hpp"
 
 AForm::AForm(const std::string &name, int gradeToSign, int gradeToExecute, const std::string &target)
-    : name(name), is_signed(false), grade_to_sign(gradeToSign),
-      grade_to_execute(gradeToExecute), target(target) {
+    : name(name), is_signed(false), grade_to_sign(gradeToSign),grade_to_execute(gradeToExecute), target(target) 
+{
     if (gradeToSign < 1 || gradeToExecute < 1) throw GradeTooHighException();
     if (gradeToSign > 150 || gradeToExecute > 150) throw GradeTooLowException();
 }

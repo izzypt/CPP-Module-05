@@ -24,7 +24,7 @@ $(NAME):
 all: $(NAME)
 
 clean: 
-	@echo "$(RED)Removed ex00...$(NC)"
+	@echo "$(RED)Removing ex00...$(NC)"
 	rm -f $(NAME)
 
 re: clean all
